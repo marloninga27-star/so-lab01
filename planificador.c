@@ -45,6 +45,9 @@ int main() {
     }
 
     // Parte C: Búsqueda del proceso de mayor prioridad
+    if (procesos == NULL || n <= 0) {
+        return -1;
+    } 
     int idx = buscarMayorPrioridad(procesos, n);
 
     // Parte D: Presentación de resultados
