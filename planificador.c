@@ -48,10 +48,13 @@ int main() {
     int idx = buscarMayorPrioridad(procesos, n);
 
     // Parte D: Presentación de resultados
-    printf("Proceso de mayor prioridad:\n");
-    printf("PID: %d\n", procesos[idx].pid);
-    printf("Nombre: %s\n", procesos[idx].nombre);
-    printf("Prioridad: %d\n", procesos[idx].prioridad);
+    printf("-----------------------------------------\n");
+    printf("   PROCESO SELECCIONADO (MAYOR PRIORIDAD) \n");
+    printf("-----------------------------------------\n");
+    printf("PID       : %d\n", procesos[idx].pid);
+    printf("Nombre    : %s\n", procesos[idx].nombre);
+    printf("Prioridad : %d\n", procesos[idx].prioridad);
+    printf("-----------------------------------------\n");
 
     return 0;
 }
