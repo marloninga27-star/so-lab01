@@ -21,6 +21,9 @@ int buscarMayorPrioridad(struct Proceso *procesos, int n) {
     return idx_mayor_prioridad;
 }
 
+printf("=========================================\n");
+printf("  SISTEMA PLANIFICADOR DE PROCESOS (SO)  \n");
+printf("=========================================\n\n");
 int main() {
     struct Proceso procesos[5];
     int n = 5;
