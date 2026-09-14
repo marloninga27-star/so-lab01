@@ -52,7 +52,13 @@ int main() {
     // Parte C: Búsqueda del proceso de mayor prioridad
     if (procesos == NULL || n <= 0) {
         return -1;
-    } 
+    }
+// Mostrar lista completa de procesos cargados
+    printf("--- Lista de Procesos Registrados ---\n");
+    for (int i = 0; i < n; i++) {
+        printf("[%d] PID: %d | Nombre: %s | Prioridad: %d\n", i + 1, procesos[i].pid, procesos[i].nombre, procesos[i].prioridad);
+    }
+    printf("\n");
     int idx = buscarMayorPrioridad(procesos, n);
 
     // Parte D: Presentación de resultados
