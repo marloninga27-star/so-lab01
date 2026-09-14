@@ -32,8 +32,14 @@ int main() {
     // Parte B: Registro de procesos
     for (int i = 0; i < n; i++) {
         printf("--- Proceso %d ---\n", i + 1);
-        printf("PID: ");
-        scanf("%d", &procesos[i].pid);
+        do {
+            printf("PID (> 0): ");
+            scanf("%d", &procesos[i].pid);
+            while (getchar() != '\n');
+            if (procesos[i].pid <= 0) {
+                printf("Error: El PID debe ser un entero positivo. Intente de nuevo.\n");
+            }
+        } while (procesos[i].pid <= 0);
 
         printf("Nombre: ");
         scanf("%19s", procesos[i].nombre);
