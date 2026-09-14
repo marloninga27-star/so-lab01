@@ -22,12 +22,12 @@ int buscarMayorPrioridad(struct Proceso *procesos, int n) {
     return idx_mayor_prioridad;
 }
 
-printf("=========================================\n");
-printf("  SISTEMA PLANIFICADOR DE PROCESOS (SO)  \n");
-printf("=========================================\n\n");
 int main() {
     struct Proceso procesos[MAX_PROCESOS];
     int n = 5;
+    printf("=========================================\n");
+    printf("  SISTEMA PLANIFICADOR DE PROCESOS (SO)  \n");
+    printf("=========================================\n\n");
 
     // Parte B: Registro de procesos
     for (int i = 0; i < n; i++) {
@@ -56,6 +56,7 @@ int main() {
     }
 
     // Parte C: Búsqueda del proceso de mayor prioridad
+    int buscarMayorPrioridad(struct Proceso *procesos, int n) {
     if (procesos == NULL || n <= 0) {
         return -1;
     }
