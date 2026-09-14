@@ -36,6 +36,7 @@ int main() {
 
         printf("Prioridad (1-5): ");
         scanf("%d", &procesos[i].prioridad);
+        while (getchar() != '\n');
         printf("\n");
     }
 
