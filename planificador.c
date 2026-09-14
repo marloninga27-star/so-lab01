@@ -38,9 +38,14 @@ int main() {
         printf("Nombre: ");
         scanf("%19s", procesos[i].nombre);
 
-        printf("Prioridad (1-5): ");
-        scanf("%d", &procesos[i].prioridad);
-        while (getchar() != '\n');
+        do {
+            printf("Prioridad (1-5): ");
+            scanf("%d", &procesos[i].prioridad);
+            while (getchar() != '\n');
+            if (procesos[i].prioridad < 1 || procesos[i].prioridad > 5) {
+                printf("Error: La prioridad debe estar entre 1 y 5. Intente de nuevo.\n");
+            }
+        } while (procesos[i].prioridad < 1 || procesos[i].prioridad > 5);
         printf("\n");
     }
 
