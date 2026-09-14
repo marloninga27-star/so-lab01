@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#define MAX_PROCESOS 5
 struct Proceso {
     int pid;
     char nombre[20];
@@ -25,7 +26,7 @@ printf("=========================================\n");
 printf("  SISTEMA PLANIFICADOR DE PROCESOS (SO)  \n");
 printf("=========================================\n\n");
 int main() {
-    struct Proceso procesos[5];
+    struct Proceso procesos[MAX_PROCESOS];
     int n = 5;
 
     // Parte B: Registro de procesos
